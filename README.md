@@ -18,9 +18,9 @@
 ### Frontend (Next.js)
 - **⚡ Performance First**: LCP < 1.2s, Core Web Vitals optimized via Server Components & ISR.
 - **📱 App-Like Experience**: PWA support with offline capability, install prompts, and mobile-first navigation.
-- **🎨 Modern Design**: Dark/Light mode, consistent typography (Inter + Source Serif), and fluid animations.
+- **🎨 Modern Design**: Premium dark mode ecosystem, consistent typography (Inter + Source Serif), and fluid animations.
 - **🔍 SEO & Discovery**: AI Overview-optimized structure, JSON-LD schema, and Google News sitemaps.
-- **🛡️ Resilience**: Privacy-first analytics and graceful degradation (works without JS).
+- **🛡️ Resilience**: Privacy-first analytics, graceful degradation, and hydration-safe architecture.
 
 ### Backend (Strapi CMS)
 - **📊 Custom Analytics**: Self-hosted dashboard tracking views without PII/Cookies.

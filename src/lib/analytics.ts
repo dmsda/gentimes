@@ -71,7 +71,8 @@ export async function trackPageView(
     const referer = headers.get('referer');
     const userAgent = headers.get('user-agent');
 
-    const response = await fetch(`${STRAPI_URL}/api/analytics/track`, {
+    // Fire and forget - don't await response body to keep it fast
+    await fetch(`${STRAPI_URL}/api/analytics/track`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -81,11 +82,13 @@ export async function trackPageView(
         referrer: parseReferrer(referer),
         device: parseDevice(userAgent),
       }),
+      cache: 'no-store',
     });
 
-    return response.ok;
+    return true;
   } catch (error) {
-    console.error('Failed to track page view:', error);
+    // Analytics failures should never crash the app
+    // console.warn('Analytics tracking skipped');
     return false;
   }
 }

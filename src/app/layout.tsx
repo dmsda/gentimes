@@ -93,7 +93,7 @@ export default function RootLayout({
   const organizationSchema = generateOrganizationSchema(siteUrl);
 
   return (
-    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`}>
+    <html lang="en" className={`${inter.variable} ${sourceSerif.variable}`} suppressHydrationWarning>
       <head>
         {/* Site-wide Structured Data */}
         <script

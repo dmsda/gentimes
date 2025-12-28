@@ -17,8 +17,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Newsletter subscription with double-opt-in logic.
   - Comment system with moderation queue.
   - PWA support (Manifest + Service Worker).
-  - Dark/Light mode toggle.
   - AI-ready SEO structure and JSON-LD.
+- **Stabilization & Fixes**:
+  - Removed unstable Light Mode to ensure consistent Dark Mode design.
+  - Fixed Hydration Mismatch errors in layout integration.
+  - Implemented robust error handling for Analytics tracking.
+  - Optimized client-side performance by removing inline scripts.
 - **Performance**:
   - Achieved LCP < 1.2s.
   - Implemented ISR caching strategy.
