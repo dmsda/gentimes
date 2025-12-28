@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GenTimes - Modern Technology News Platform
 
-## Getting Started
+![GenTimes Preview (Light/Dark Mode)](/public/og-image.svg)
 
-First, run the development server:
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Framework: Next.js 16](https://img.shields.io/badge/Next.js-16.1-black)](https://nextjs.org)
+[![CMS: Strapi v5](https://img.shields.io/badge/Strapi-v5-purple)](https://strapi.io)
+[![Status: Educational](https://img.shields.io/badge/Status-Reference_Project-orange)](https://github.com/dmsda/gentimes)
+
+> A production-grade, national-scale open-source news platform built for the AI era.
+
+**GenTimes** is a reference architecture for building modern, high-performance content platforms. It demonstrates how to combine the flexibility of a Headless CMS (Strapi) with the performance of a cutting-edge Frontend (Next.js App Router).
+
+---
+
+## 🚀 Key Features
+
+### Frontend (Next.js)
+- **⚡ Performance First**: LCP < 1.2s, Core Web Vitals optimized via Server Components & ISR.
+- **📱 App-Like Experience**: PWA support with offline capability, install prompts, and mobile-first navigation.
+- **🎨 Modern Design**: Dark/Light mode, consistent typography (Inter + Source Serif), and fluid animations.
+- **🔍 SEO & Discovery**: AI Overview-optimized structure, JSON-LD schema, and Google News sitemaps.
+- **🛡️ Resilience**: Privacy-first analytics and graceful degradation (works without JS).
+
+### Backend (Strapi CMS)
+- **📊 Custom Analytics**: Self-hosted dashboard tracking views without PII/Cookies.
+- **🔥 Trending Engine**: Automated gravity-based algorithm to rank hot stories.
+- **🤖 SEO Assistant**: Real-time content analysis for "AI Readiness" and search ranking.
+- **📧 Newsletter**: Integrated double-opt-in subscription system.
+- **💬 Community**: Comment system with moderation workflow.
+
+---
+
+## 🛠 Tech Stack
+
+| Component | Technology | Reasoning |
+|-----------|------------|-----------|
+| **Frontend** | Next.js 16 (App Router) | Best-in-class performance, SEO, and Server Components. |
+| **Styling** | Tailwind CSS v4 | Utility-first, responsive, and maintainable styles. |
+| **CMS** | Strapi v5 | Headless, extensible, and self-hosted content management. |
+| **Database** | SQLite (Dev) / Postgres (Prod) | Reliable relational data storage. |
+| **State** | React Server Components | Minimized client-side JavaScript bundle. |
+
+---
+
+## 📂 Repository Structure
+
+The project is structured as a monorepo-lite:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── src/                # Frontend source code (Next.js)
+│   ├── app/            # App Router pages & API routes
+│   ├── components/     # UI Components (Server & Client)
+│   └── lib/            # Utilities & Data Fetching
+├── cms/                # Backend source code (Strapi)
+│   ├── src/api/        # Custom Content Types & Controllers
+│   └── config/         # Database & Plugin configuration
+├── public/             # Static assets (Images, Icons, SVG)
+└── docs/               # Detailed architectural documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📖 Documentation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Detailed documentation is available in the `/docs` directory:
 
-## Learn More
+- 🏗 **[System Architecture](docs/architecture.md)**: Full system diagram and design patterns.
+- 🔍 **[SEO Strategy](docs/seo-strategy.md)**: How we optimize for Google AI Overviews (SGE).
+- ⚙️ **[CMS Overview](docs/cms-overview.md)**: Content schemas, workflows, and custom plugins.
+- ⚡ **[Performance Notes](docs/performance-notes.md)**: Optimization audit, metrics, and tuning guide.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏁 Quick Start
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Prerequisites
+- Node.js 18+
+- NPM or Yarn
 
-## Deploy on Vercel
+### 1. Clone the Repository
+```bash
+git clone https://github.com/dmsda/gentimes.git
+cd gentimes
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Setup Backend (CMS)
+```bash
+cd cms
+npm install
+cp .env.example .env
+npm run develop
+# Strapi will start on http://localhost:1337
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. Setup Frontend
+ Open a new terminal:
+```bash
+# Return to root
+npm install
+cp .env.example .env.local
+npm run dev
+# Frontend will start on http://localhost:3000
+```
+
+---
+
+## 👥 Author
+
+**Dimas Aditya**  
+*Full Stack Engineer & Open Source Enthusiast*
+
+Designing systems that bridge the gap between performance and user experience.
+
+- 🌐 [GitHub Profile](https://github.com/dmsda)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! This project is intended for educational and reference purposes, but improvements are always appreciated. Please read [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details.
+
+## 📄 License
+
+This project is open-sourced under the [MIT License](LICENSE).

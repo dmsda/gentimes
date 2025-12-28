@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "page_views",
+  "info": {
+    "singularName": "page-view",
+    "pluralName": "page-views",
+    "displayName": "Page View",
+    "description": "Analytics: tracks page views per article"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "article": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::article.article"
+    },
+    "timestamp": {
+      "type": "datetime",
+      "required": true
+    },
+    "referrer": {
+      "type": "enumeration",
+      "enum": ["search", "social", "direct", "referral"],
+      "default": "direct"
+    },
+    "device": {
+      "type": "enumeration",
+      "enum": ["mobile", "desktop", "tablet"],
+      "default": "desktop"
+    },
+    "sessionHash": {
+      "type": "string"
+    }
+  }
+}

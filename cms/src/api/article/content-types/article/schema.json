@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": "News articles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "excerpt": {
+      "type": "text",
+      "required": true,
+      "maxLength": 300
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true,
+      "default": "GenTimes Editorial"
+    },
+    "featuredImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "articles"
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false
+    },
+    "isTrending": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSponsored": {
+      "type": "boolean",
+      "default": false
+    },
+    "seoTitle": {
+      "type": "string"
+    },
+    "seoDescription": {
+      "type": "text"
+    },
+    "keyTakeaway": {
+      "type": "text",
+      "maxLength": 200
+    },
+    "keyPoints": {
+      "type": "json"
+    },
+    "tags": {
+      "type": "json"
+    },
+    "focusKeyphrase": {
+      "type": "string"
+    },
+    "viewCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "viewsLast24h": {
+      "type": "integer",
+      "default": 0
+    },
+    "viewsLast7d": {
+      "type": "integer",
+      "default": 0
+    },
+    "trendingScore": {
+      "type": "float",
+      "default": 0
+    },
+    "seoScore": {
+      "type": "integer",
+      "default": 0
+    },
+    "readabilityScore": {
+      "type": "integer",
+      "default": 0
+    },
+    "aiReadinessScore": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

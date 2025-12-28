@@ -1,0 +1,30 @@
+# GenTimes Robots.txt
+# Optimized for 2026 SEO including AI crawlers
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+
+# Sitemap location
+Sitemap: https://gentimes.com/sitemap.xml
+
+# AI Crawlers - Allowing for citation and summarization
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Rate limiting hints for crawlers
+Crawl-delay: 1
+
+# Host directive
+Host: https://gentimes.com
