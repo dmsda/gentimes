@@ -108,7 +108,7 @@ npm run dev
 ## 👥 Author
 
 **Dimas Aditya**  
-*Full Stack Engineer & Open Source Enthusiast*
+*Vibe Coder YooY*
 
 Designing systems that bridge the gap between performance and user experience.
 
